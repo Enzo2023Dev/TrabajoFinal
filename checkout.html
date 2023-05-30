@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Verificar compra</title>
+</head>
+<body>
+    <header>
+        <!--Barra de contactos y usuario-->
+    
+            <div class="top-nav">
+                
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <div class="d-md-none dropdown dropdown-contact">
+                                <a class="dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Teléfono e email
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-envelope-fill"></i> 
+                                                gameshop@hotmail.com
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-whatsapp"></i>
+                                                3366 55-8888
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="contact d-none d-md-inline-flex">
+                                    <div class="contact-col-start">
+                                        <i class="bi bi-envelope-fill"></i> 
+                                        <a class="text-decoration-none" href="">gameshop@hotmail.com</a>
+                                    </div>
+                        
+                                    <div class="contact-col-start">
+                                        <i class="bi bi-whatsapp"></i>
+                                        <a class="text-decoration-none" href="">3366 55-8888</a>
+                                    </div>
+                                </div>
+    
+                            </div>
+                                
+                            <div class="col-auto">
+                                <div class="user-config">
+                                    <div class="contact-col-end">
+    
+                                        <a class="text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#regConfig">
+                                            <img src="./img/flags/argentina.png" alt="flag"> Region / Moneda
+                                        </a>
+                                            
+                                        <div class="money modal fade" id="regConfig" tabindex="-1" aria-labelledby="regConfigLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                        
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title fs-5" id="regConfigLabel">Region / Moneda</h2>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    
+                                                    <div class="modal-body">
+    
+                                                        <div class="region-select mb-4">
+                                                            <p>Seleccione su región:</p>
+    
+                                                            <select class="form-select" name="region" id="reg">
+                                                                <option value="argentina">Argentina</option>
+                                                            </select>
+                                                        </div>
+    
+                                                        <div class="currency-select">
+                                                            <p>Seleccione su moneda:</p>
+                                                            <select class="form-select" name="currency" id="moneda">
+                                                                <option value="pesos">USD Dolar Estadounidense</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="modal-footer d-flex justify-content-center">
+                                                        <button type="button" class="btn btn-primary btn-save-money w-100" id="btn-config">Guardar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                        
+                                    <div class="contact-col-end">
+                                            
+                                        <div class="user">
+    
+                                            <a class="text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#userLogin">
+                                                <i class="bi bi-person-fill"></i>
+                                                <span>Mi cuenta</span>
+                                            </a>
+    
+                                            <div class="modal fade" id="userLogin" tabindex="-1" aria-labelledby="userLoginLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        
+                                                        <div class="modal-header user-header">
+                                                            <nav>
+                                                                <div class="nav nav-tabs" id="loginnav-tab" role="tablist">
+                                                                    <button class="nav-link active" id="loginnav-home-tab" data-bs-toggle="tab" data-bs-target="#loginnav-home" type="button" role="tab" aria-controls="loginnav-home" aria-selected="true">
+                                                                        Inicia sesión
+                                                                    </button >
+                                                                    
+                                                                    <button class="nav-link" id="registernav-home-tab" data-bs-toggle="tab" data-bs-target="#registernav-home" type="button" role="tab" aria-controls="registernav-home" aria-selected="false">
+                                                                        Registrarse
+                                                                    </button>
+                                                                </div>
+                                                            </nav>
+    
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                            
+                                                        <div class="modal-body user-body">
+                                                            
+                                                            <div class="tab-content" id="usernav-tabContent">
+                                                                
+                                                                <div class="tab-pane fade show active" id="loginnav-home" role="tabpanel" aria-labelledby="login-home-tab" tabindex="0">
+                                                                    <div class="form-group mb-4">                                        
+                                                                        <input type="email" id="email" name="email" class="form-control" placeholder="Ingrese su email" required>
+                                                                    </div>
+                                                                
+                                                                    <div class="form-group mb-4">
+                                                                        <input type="password" id="password" name="password" class="form-control" placeholder="Ingrese su contraseña" required>
+                                                                    </div>
+            
+                                                                    <div class="row">
+            
+                                                                        <div class="col d-flex justify-content-start"> 
+                                                                            
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" id="remember" name="remember" value="true">
+                                                                                <label class="form-check-label" for="remember">Recordarme</label>
+                                                                            </div>
+                                    
+                                                                        </div>
+                                                                                    
+                                                                        <div class="col d-flex justify-content-end mb-4">
+                                                                            <a class="text-decoration-none" href="./forgetpass.html">¿Olvidó su contraseña?</a>
+                                                                        </div>
+    
+                                                                        <div class="form-group">
+                                                                            <button type="sumbit" class="btn btn-primary btn-user w-100" id="login-btn">Iniciar sesión</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="tab-pane fade" id="registernav-home" role="tabpanel" aria-labelledby="register-home-tab" tabindex="0">
+                                                                    <form action="" method="post">
+                                                                        
+                                                                        <div class="form-group mb-4">                                        
+                                                                            <input type="text" id="nom" name="nombre" class="form-control" placeholder="Nombre" required>
+                                                                        </div>
+                                        
+                                                                        <div class="form-group mb-4">                                        
+                                                                            <input type="text" id="app" name="apellido" class="form-control" placeholder="Apellido" required>
+                                                                        </div>
+    
+                                                                        <div class="form-group mb-4">                                        
+                                                                            <input type="text" id="edad" name="edad" class="form-control" placeholder="Edad" required>
+                                                                        </div>
+                                                                        
+                                                                        <div class="form-group mb-4">
+                                                                            <input type="text" id="tel" name="telefono" class="form-control" placeholder="Teléfono" required>
+                                                                        </div>
+                                                                        
+                                                                        <div class="form-group mb-4">
+                                                                            <input type="text" id="pais" name="pais" class="form-control" placeholder="País" required>
+                                                                        </div>
+                                                                        
+                                                                        <div class="form-group mb-4">                                        
+                                                                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                                                                        </div>
+                                                                        
+                                                                        <div class="form-group mb-4">
+                                                                            <input type="password" id="pass" name="pass" class="form-control" placeholder="Contraseña" required>
+                                                                        </div>
+                                        
+                                                                        <div class="form-group mb-4">
+                                                                            <input type="password" id="repass" name="repass" class="form-control" placeholder="Repetir contraseña" required>
+                                                                        </div>
+                                        
+                                                                        <div class="form-group">
+                                                                            <button type="submit" class="btn btn-primary btn-user w-100" id="register-btn">Registrarse</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+        
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                    </div>
+                        
+            </div>
+    
+        <!--Barra de navegación-->
+    
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+    
+                    <a class="logo navbar-brand" href="./index.html">
+                        GAME<span>shop</span>
+                    </a>
+    
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav m-auto my-2 my-lg-0">
+                            <li class="nav-item">
+                                <a href="./store.html" class="nav-link">Tienda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Categorias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Plataformas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./contact.html" class="nav-link">Contactos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="icons">
+    
+                        <div class="search">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                <i class="bi bi-search"></i>
+                            </a>
+    
+                            <div class="search-modal modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <div data-bs-theme="dark">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="search-bar input-group">
+                                                <input type="text" class="form-control" placeholder="Buscar...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="wishlist-i ps-3">
+                            <a href="./wishlist.html">
+                                <i class="bi bi-heart"></i>
+                            </a>
+                            <span class="count">1</span>
+                        </div>
+        
+                        <div class="cart ps-3 dropdown">
+                            <a href="./cart.html">
+                                <i class="bi bi-cart"></i>
+                                <span class="">$69.99</span> 
+                            </a>
+                        </div>
+    
+                        <div class="offcanvas-items d-lg-none navbar-toggle ps-3">
+                            <button class="navbar-toggler" type="button" data-bs-target="#offcanvasNavbar" data-bs-toggle="offcanvas">
+                                <i class="bi bi-list"></i>
+                            </button>
+    
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title">
+                                        <a class="logo navbar-brand" href="#" id="offcanvasNavbarLabel">
+                                            GAME<span>shop</span>
+                                        </a>
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="nav navbar-nav d-block d-lg-none">
+                                        <li class="nav-item">
+                                            <a href="./store.html" class="nav-link">Tienda</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="" class="nav-link">Categorias</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="" class="nav-link">Plataformas</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="/contact.html" class="nav-link">Contactos</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </nav>
+            
+    </header>
+    
+    <div class="container py-5">
+        <div class="text-center">
+            <h1 class="py-3">Verificar compra</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card border-0 p-3 bg-light">
+                    <div class="card-body check">
+
+                        <div class="form-group mb-4">                                        
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="ntart">Tarjeta</span>
+                            <input type="number" class="form-control" placeholder="Numero de tarjeta" aria-describedby="ntart">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="ntart">CVV</span>
+                            <input type="number" class="form-control" placeholder="CVV" aria-describedby="ntart">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="ntart">Fecha de inicio</span>
+                            <input type="date" class="form-control" aria-describedby="ntart">
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="ntart">Fecha de vencimeinto</span>
+                            <input type="date" class="form-control" aria-describedby="ntart">
+                        </div>
+                    </div>
+                    <div class="py-3 btn-checkout d-flex justify-content-center">
+                        
+                        <button onclick="compraverificada()" class="btn btn-primary px-5" type="submit">Comprar</button>
+                        
+                        <button onclick="cancelada()" class="btn btn-danger px-5" type="submit">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer class="bg-footer" style="margin-top: 60px;">
+        <div class="container py-lg-5 py-4">
+
+            <div class="row pb-2">
+                <div class="col-md-3 text-center text-md-start mb-4">
+                    <div class="mb-4">
+                        <a class="logo navbar-brand d-inline-block align-middle mt-n1 me-3" href="#">
+                            <div class="d-block">GAME<span>shop</span></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-2 text-center text-md-start mb-4">
+                    <h5>Compania</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="./about.html" class="nav-link p-0 text-body-secondary">Sobre nosotros</a></li>
+                        <li class="nav-item mb-2"><a href="./contact.html" class="nav-link p-0 text-body-secondary">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 text-center text-md-start mb-4">
+                    <h5>Comunidad</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sorteos</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 text-center text-md-start mb-4">
+                    <form class="subcribe-form">
+                        <h5 class="mb-4">Suscríbete para recibir ofertas personalizadas</h5>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Ingrese su email</label>
+                            <div class="input-group">
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Ingrese su email">
+                                <button class="btn btn-primary" type="button">Suscribirse</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">
+                    <p>&copy; 2023 GAMEshop. Todos los derechos reservados.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-twitter"></i></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

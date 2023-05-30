@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --White: #fff;
+    --black: #000;
+    --light-shades: #FAF7F6;
+    --light-grey: #E5E5E5;
+    --light-less-accent: #88caf7;
+    --light-accent: #2C9DE9;
+    --main-brand-color: #6E7499;
+    --dark-less-accent: #7761f3;
+    --dark-accent: #5238eb;
+    --dark-less-shades: #362f3f;
+    --dark-shades: #1A1522;
+    --dark: #1a181b;
+}
+
+::selection{
+    background: var(--dark-accent);
+    color: var(--light-shades);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*--------- TOP NAV ---------*/
+
+.top-nav{
+    padding: .5rem 2rem;
+    background-color: var(--dark-less-accent);
+}
+
+.top-nav i{
+    color: var(--light-shades);
+}
+
+.top-nav a{
+    color: var(--light-shades);
+}
+
+.top-nav a:hover{
+    color: var(--light-less-accent);
+    transition: .1s;
+}
+
+.dropdown-contact{
+    margin-top: 2px;
+}
+
+.dropdown-contact .dropdown-menu{
+    border: none;
+    border-radius: 0px;
+    background-color: var(--dark);
+}
+
+.user-config img{
+    position: relative;
+    top: -2px;
+    right: 2px;
+}
+
+.user-config img::selection{
+    background: none
+}
+
+.contact ,.user-config{
+    display: flex;
+    align-items: center;
+}
+
+.contact i,.user-config i{
+    font-size: 1.2rem;
+    margin-right: .2rem;
+}
+
+.contact-col-start ,.contact-col-end{
+    margin-right: .9rem;
+}
+
+.money{
+    font-size: .8rem;
+}
+
+.money .modal-header{
+    border-bottom: none;
+}
+
+.money .modal-footer{
+    border-top: none;
+}
+
+.money .btn-save-money{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+    padding: .5rem;
+}
+.money .btn-save-money:hover{
+    background-color: var(--light-shades);
+    color: var(--dark-accent);
+}
+
+.region-select select, .currency-select select{
+    border-radius: 0px;
+}
+
+.user-header{
+    border-bottom: var(--light-grey);
+    height: 48px;
+    padding-top: 25px;
+}
+
+.user-header .nav-tabs{
+    color: var(--light-less-accent);
+    font-weight: 500;
+    font-size: .9rem;
+    border: none;
+}
+
+.user-header .btn-close{
+    color: var(--light-less-accent);
+    font-size: .9rem;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    margin-bottom: 0rem;
+}
+
+.user-header .nav-tabs .nav-link{
+    border: none;
+}
+
+.user-header .nav-tabs .nav-link.active{
+    color: var(--light-accent);
+    border: none;
+    border-bottom: 2px solid var(--light-accent);
+}
+
+.user-body a{
+    color: var(--light-accent);
+}
+
+.user-body .form-control{
+    border-radius: 0px;
+}
+
+.user-body .btn-user{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+    padding: .5rem;
+}
+
+.user-body .btn-user:hover{
+    background-color: var(--light-shades);
+    color: var(--dark-accent);
+}
+/*--------- NAVBAR ---------*/
+
+.navbar-toggle , .navbar-toggler{
+    border: none;
+    background: none;
+}
+.navbar-toggle i{
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.logo{
+    color: var(--dark-accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.logo:hover{
+    color: var(--dark-accent);
+}
+
+.logo::selection{
+    background: none;
+    color: var(--dark-accent);
+}
+
+.logo span{
+    color: var(--light-shades);
+    margin: 5px;
+    background-color: var(--dark-accent);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+    text-transform: lowercase;
+}
+
+.logo span::selection{
+    background: none;
+}
+
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons i{
+    font-size: 1.5rem;
+}
+
+.icons a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.icons a:hover{
+    color: var(--light-accent);
+    transition: .1s;
+}
+
+
+.search-bar .form-control{
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid var(--light-shades);
+    background-color: transparent;
+    color: var(--White);
+    font-size: 1rem;
+    padding: .5rem .5rem;
+}
+
+.search-bar .form-control:focus{
+    box-shadow: none;
+    border-bottom: 1px solid var(--light-accent);
+}
+    
+.search-bar .form-control::placeholder{
+    color: var(--White);
+    font-size: 1rem;
+}
+
+.search-modal .modal-content{
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+}
+
+.search-modal div button{
+    position: relative;
+    left: 27rem;
+}
+
+.search-modal button{
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.search-modal button:hover{
+    transition: .1s;
+}
+
+.search-modal .modal-header{
+    border-bottom: none;
+}
+
+.wishlist-i .count{
+    position: relative;
+    top: -.5rem;
+    left: .2rem;
+    color: var(--White);
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: var(--dark-accent);
+    border-radius: .5rem;
+    padding: .1rem .3rem;
+}
+
+.cart a{
+    color: #000;
+}
+
+.cart span{
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    left: 4px;
+}
+
+/*--------- SECTION ---------*/
+
+
+/*--------- Carousel ---------*/
+
+.c-item{
+    height: 650px;
+}
+
+.c-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-caption{
+    position: absolute;
+    top: 30%;
+}
+
+.price{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.price span{
+    background-color: var(--dark-accent);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.c-logo{
+    width: 520px;
+}
+
+.slide1{
+    background: url("../img/wallpaper/asm.jpg") no-repeat;
+}
+.slide2{
+    background: url("../img/wallpaper/mk1reboot.jpg") no-repeat;
+}
+
+.price{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/*--------- Products ---------*/
+
+.btn-outline-store{
+    color: var(--dark-accent);
+    border-color: var(--dark-accent);
+}
+
+.btn-outline-store:hover{
+    color: var(--light-shades);
+    border-color: var(--light-shades);
+    background-color: var(--dark-less-accent);
+}
+
+.btn-outline-store:focus{
+    box-shadow: 0 0 0 .2rem var(--dark-accent);
+}
+
+.btn-outline-store:active{
+    color: var(--light-shades);
+    border-color: var(--light-shades);
+    background-color: var(--dark-accent);
+}
+
+.btn-outline-store:disabled{
+    color: var(--light-shades);
+    border-color: var(--light-shades);
+    background-color: var(--dark-accent);
+}
+
+/*--------- Cover Card---------*/
+
+.btn-wishlist{
+    position: absolute;
+    top: .0rem;
+    right: 0em;
+    color: var(--White);
+    background-color: var(--dark-accent);
+    opacity: 70%;
+    border-radius: 0px 0px 2px 22px;
+    font-size: 2rem;
+}
+
+.btn-wishlist:hover{
+    color: var(--dark-less-accent);
+}
+
+.product .card{
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 6px var(--light-grey);
+}
+
+.product a{
+    color: var(--black);
+}
+
+.product .card-img-top{
+    border-radius: 0;
+}
+
+.category .card{
+    border: none;
+    border-radius: 0;
+    background-color: var(--dark-less-accent);
+    box-shadow: 0 0 6px var(--light-grey);
+}
+
+.category a{
+    text-decoration: none;
+}
+
+.category .card-title{
+    color: var(--White);
+    padding: 22px;
+}
+
+/*--------- FOOTER ---------*/
+.bg-footer{
+    background-color: var(--light-grey);
+}
+
+.subcribe-form input{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    padding: .5rem;
+    width: 100%;
+}
+.subcribe-form button{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+    padding: .5rem;
+}
+.subcribe-form button:hover{
+    background-color: var(--light-shades);
+    color: var(--dark-accent);
+}
+
+.subcribe-form button:focus{
+    box-shadow: 0 0 0 .2rem var(--dark-accent);
+}
+
+.subcribe-form button:active{
+    color: var(--light-shades);
+    border-color: var(--light-shades);
+    background-color: var(--dark-accent);
+}
+
+.subcribe-form button:disabled{
+    color: var(--light-shades);
+    border-color: var(--light-shades);
+    background-color: var(--dark-accent);
+}
+
+/*-----------------------------------*/
+/*--------- FORGET PASSWORD ---------*/
+/*-----------------------------------*/
+
+
+.forget .card{
+    border: none;
+    padding-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forget .card .card-body{
+    padding: 1.3rem;
+    width: 80%;
+}
+
+.forget label{
+    color: var(--dark-accent);
+}
+
+.forget input{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    padding: .5rem;
+    width: 100%;
+}
+
+.forget button{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+    padding: .5rem;
+}
+
+.forget button:hover{
+    background-color: var(--light-shades);
+    color: var(--dark-accent);
+}
+
+.forget button:focus{
+    box-shadow: 0 0 0 .2rem var(--dark-accent);
+}
+
+.forget button:active{
+    color: var(--light-shades);
+    border-color: var(--light-shades);
+    background-color: var(--dark-accent);
+}
+
+.forget button:disabled{
+    color: var(--light-shades);
+    border-color: var(--light-shades);
+    background-color: var(--dark-accent);
+}
+
+.forget .text-center{
+    padding: .5rem;
+}
+
+/*----------------------------*/
+/*--------- WISHLIST ---------*/
+/*----------------------------*/
+
+.wishlist .btn{
+    width: 100%;
+    border-radius: .0rem;
+}
+
+.wishlist .btn-primary{
+    color: var(--White);
+    border: .1rem solid var(--dark-less-accent);
+    background-color: var(--dark-less-accent);
+}
+.wishlist .btn-primary:hover{
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+}
+.wishlist .btn-primary:focus{
+    border: .1rem solid var(--light-accent);
+    background-color: var(--light-accent);
+}
+
+/*-------------------------*/
+/*--------- CART ----------*/
+/*-------------------------*/
+
+.cart .btn-close{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+}
+
+.cart .btn{
+    width: 100%;
+    border-radius: .0rem;
+}
+
+.cart .btn-primary{
+    color: var(--White);
+    border: .1rem solid var(--dark-less-accent);
+    background-color: var(--dark-less-accent);
+}
+.cart .btn-primary:hover{
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+}
+.cart .btn-primary:focus{
+    border: .1rem solid var(--light-accent);
+    background-color: var(--light-accent);
+}
+
+/*--------------------------*/
+/*--------- STORE ----------*/
+/*--------------------------*/
+
+.store-filter{
+    background-color: var(--light-grey);
+    padding: .5rem;
+}
+
+.store-filter .form-range{
+    width: 100%;
+}
+
+.store-filter .form-control{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    padding: .5rem;
+    width: 100%;
+}
+
+.store-filter input{
+    border-radius: .0rem;
+}
+.store-filter select, .store-option select{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    padding: .5rem;
+    width: 100%;
+}
+
+.store-filter .btn{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+    padding: .5rem;
+}
+
+
+.store-filter .btn:hover{
+    background-color: var(--light-shades);
+    color: var(--dark-accent);
+}
+
+.store-filter .btn:focus{
+    box-shadow: 0 0 0 .2rem var(--dark-accent);
+}
+
+.store-filter .btn:active{
+    color: var(--light-shades);
+    border-color: var(--light-shades);
+    background-color: var(--dark-accent);
+}
+
+.store-filter .btn:disabled{
+    color: var(--light-shades);
+    border-color: var(--light-shades);
+    background-color: var(--dark-accent);
+}
+
+
+/*----------------------------*/
+/*--------- PRODUCT ----------*/
+/*----------------------------*/
+
+.badge{
+    border-radius: .0rem;
+    background-color: var(--light-accent);
+    padding: .2rem .5rem;
+    font-size: .8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: .5rem;
+    text-decoration: none;
+}
+
+.btn-product .btn{
+    border-radius: .0rem;
+    padding: .5rem;
+}
+
+.btn-product .btn-primary{
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+    padding: .5rem;
+}
+
+.img-screen img{
+    width: 400px;
+}
+
+/*----------------------------*/
+/*--------- CONTACT ----------*/
+/*----------------------------*/
+
+.contact .card{
+    border: none;
+    padding-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .card .card-body{
+    padding: 1.3rem;
+    width: 80%;
+}
+
+.contact label{
+    color: var(--dark-accent);
+}
+
+.contact input{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    padding: .5rem;
+    width: 100%;
+}
+
+.contact textarea{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    padding: .5rem;
+    width: 100%;
+}
+
+.contact button{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+    padding: .5rem;
+}
+
+.contact .text-center{
+    padding: .5rem;
+}
+
+
+/*--------------------------*/
+/*--------- ABOUT ----------*/
+/*--------------------------*/
+
+.about table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about td{
+    padding: .5rem;
+}
+
+.about img{
+    width: 40%;
+    border-radius: 50%;
+}
+
+/*-----------------------------*/
+/*--------- CHECKOUT ----------*/
+/*-----------------------------*/
+
+.check input{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    padding: .5rem;
+    width: 100%;
+}
+.check .input-group-text{
+    border-radius: .0rem;
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+    color: var(--White);
+}
+
+.btn-checkout .btn{
+    border-radius: .0rem;
+    margin: .5rem;
+}
+
+.btn-checkout .btn-primary{
+    border: .1rem solid var(--dark-accent);
+    background-color: var(--dark-accent);
+    color: var(--White);
+}
+/*--------- RESPONSIVE ---------*/
+
+/*--------- Carousel Responsive ---------*/
+
+@media only screen and (max-width: 1920px){
+    .c-img{
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 986px){
+    .c-img{
+        background-position: center;
+    }
+    .cart .btn-close{
+        background-color: var(--light-accent);
+    }
+}
+
+@media only screen and (max-width: 695px){
+    .c-img{
+        background-position: center;
+    }
+    .c-logo{
+        width: 300px;
+    }
+}

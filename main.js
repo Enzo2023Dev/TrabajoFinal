@@ -8,5 +8,5 @@ function compraverificada() {
 function cancelada() {
     alert("Compra cancelada");
     
-    window.location = "./products/stjw.html";
+    window.location = "/products/stjw.html";
 }
